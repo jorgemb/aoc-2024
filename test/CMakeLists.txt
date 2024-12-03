@@ -11,6 +11,7 @@ include(Catch)
 
 # ---- Tests ----
 
+add_compile_definitions(DATA_PATH="${CMAKE_SOURCE_DIR}/test/data")
 add_executable(aoc2024_test source/aoc2024_test.cpp
         source/day_1.cpp)
 target_link_libraries(
@@ -18,7 +19,7 @@ target_link_libraries(
     aoc2024_lib
     Catch2::Catch2WithMain
 )
-target_compile_features(aoc2024_test PRIVATE cxx_std_20)
+target_compile_features(aoc2024_test PRIVATE cxx_std_23)
 
 catch_discover_tests(aoc2024_test)
 
