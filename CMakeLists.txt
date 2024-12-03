@@ -21,6 +21,10 @@ add_library(
     source/lib.cpp
         source/historian_hysteria.cpp
         source/historian_hysteria.hpp
+        source/common.cpp
+        source/common.hpp
+        source/red_nosed_reports.cpp
+        source/red_nosed_reports.hpp
 )
 
 target_include_directories(

@@ -14,17 +14,16 @@
 
 #include "historian_hysteria.hpp"
 
+#include "common.hpp"
+#include <cmath>
+
 namespace rng = std::ranges;
 namespace vws = std::views;
 
 auto HistorianHysteria::read_lists(std::istream& input)
     -> std::pair<IntList, IntList> {
   // Get raw information
-  auto raw_input = std::vector<int> {};
-  std::copy(std::istream_iterator<int>(input),
-            std::istream_iterator<int>(),
-            std::back_inserter(raw_input));
-
+  auto raw_input = common::simple_parse<int>(input);
   assert(raw_input.size() % 2 == 0 && "Input must be evenly divisible by 2");
 
   // Make into two lists
@@ -50,7 +49,7 @@ auto HistorianHysteria::solve_p1(std::istream& input) -> int {
                          right.begin(),
                          0,
                          std::plus {},
-                         [](int l, int r) { return std::abs(l - r); });
+                         [](int lhs, int rhs) { return std::abs(lhs - rhs); });
 
   return result;
 }

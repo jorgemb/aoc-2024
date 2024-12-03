@@ -14,7 +14,7 @@
 
 namespace fs = std::filesystem;
 using namespace std::string_literals;
-TEST_CASE("Day1 - Historian Hysteria") {
+TEST_CASE("Day 1 - Historian Hysteria") {
   // Base test
   const auto test_input = R"(
 3   4
@@ -33,7 +33,7 @@ TEST_CASE("Day1 - Historian Hysteria") {
 
     // Actual test
     fmt::println("Historian Hysteria -- Part 1: {}",
-                HistorianHysteria::solve_p1(input_file));
+                 HistorianHysteria::solve_p1(input_file));
   }
 
   SECTION("Part 2") {
@@ -41,6 +41,6 @@ TEST_CASE("Day1 - Historian Hysteria") {
 
     // Actual test
     fmt::println("Historian Hysteria -- Part 2: {}",
-      HistorianHysteria::solve_p2(input_file));
+                 HistorianHysteria::solve_p2(input_file));
   }
 }

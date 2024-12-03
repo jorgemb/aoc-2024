@@ -13,7 +13,8 @@ include(Catch)
 
 add_compile_definitions(DATA_PATH="${CMAKE_SOURCE_DIR}/test/data")
 add_executable(aoc2024_test source/aoc2024_test.cpp
-        source/day_1.cpp)
+        source/day_1.cpp
+        source/day_2.cpp)
 target_link_libraries(
     aoc2024_test PRIVATE
     aoc2024_lib
