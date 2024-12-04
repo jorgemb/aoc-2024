@@ -25,6 +25,10 @@ add_library(
         source/common.hpp
         source/red_nosed_reports.cpp
         source/red_nosed_reports.hpp
+        source/mull_it_over.hpp
+        source/mull_it_over.cpp
+        source/ceres_search.hpp
+        source/ceres_search.cpp
 )
 
 target_include_directories(

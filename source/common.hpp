@@ -39,10 +39,24 @@ auto parse_lines(std::istream& input) -> std::vector<std::vector<T>> {
   return parsed_lines;
 }
 
+/**
+ * Returns a vector with all the lines.
+ */
+auto raw_lines(std::istream& input) -> std::vector<std::string>;
+
 template<typename T>
 using TMatrix = std::vector<std::vector<T>>;
 
 using IntMatrix = std::vector<std::vector<int>>;
+
+namespace filters{
+  /**
+   * Returns whether the provided line is empty or not.
+   */
+  inline auto line_is_not_empty(std::string_view line) -> bool{
+    return !line.empty();
+  }
+} // namespace filters
 
 }  // namespace common
 #endif  // COMMON_HPP
